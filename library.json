@@ -24,7 +24,7 @@
 	"frameworks": "arduino",
 	"platforms": "*",
 	"fabricaio" : {
-		"name": "Environmental Sensor",
+		"name": "Multi Gas Sensor",
 		"type": 0,
 		"category": "Environment Sensor",
 		"libname": "DFMICSGas",
