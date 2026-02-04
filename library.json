@@ -1,0 +1,77 @@
+{
+	"name": "sensor-DFMICSGas",
+	"version": "0.5.0",
+	"description": "DF Robot MICS multifunctional gas sensor",
+	"keywords": "Fabrica-IO, sensor, gas, CO, CH4, C2H5OH, H2, NH3, NO2",
+	"repository":
+	{
+	  "type": "git",
+	  "url": "https://github.com/FabricaIO/sensor-DFMICSGas.git"
+	},
+	"authors":
+	[
+	  {
+		"name": "Sam Groveman",
+		"email": "SamGroveman@outlook.com",
+		"url": "https://github.com/FabricaIO"
+	  }
+	],
+	"dependencies": {
+		"DFRobot_MICS": "https://github.com/DFRobot/DFRobot_MICS"
+	},
+	"license": "GPLv3",
+	"homepage": "https://github.com/FabricaIO",
+	"frameworks": "arduino",
+	"platforms": "*",
+	"fabricaio" : {
+		"name": "Environmental Sensor",
+		"type": 0,
+		"category": "Environment Sensor",
+		"libname": "DFMICSGas",
+		"includes": ["DFMICSGas"],
+		"description": "MICS-4514, gas sensor that measures various gasses in the air",
+		"constructor":
+		[
+			[
+				{
+					"name": "I2C_bus",
+					"type": "TwoWire*",
+					"description": "The I2C bus the sensor is connected to",
+					"default": "&Wire"
+				},
+				{
+					"name": "address",
+					"type": "uint8_t",
+					"description": "The I2C address of the sensor",
+					"default": "0x78"
+				}
+			],
+			[
+				{
+					"name": "sda",
+					"type": "int",
+					"description": "The SDA pin on the I2C bus",
+					"default": "21"
+				},
+				{
+					"name": "scl",
+					"type": "int",
+					"description": "The SCL pin on the I2C bus",
+					"default": "22"
+				},
+				{
+					"name": "I2C_bus",
+					"type": "TwoWire*",
+					"description": "The I2C bus the sensor is connected to",
+					"default": "&Wire"
+				},
+				{
+					"name": "address",
+					"type": "uint8_t",
+					"description": "The I2C address of the sensor",
+					"default": "0x78"
+				}
+			]
+		]
+	}
+  }
