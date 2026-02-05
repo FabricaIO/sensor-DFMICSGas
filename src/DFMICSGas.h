@@ -7,6 +7,14 @@
  * https://www.dfrobot.com/product-2417.html
  * 
  * Contributors: Sam Groveman
+ * 
+ * I2C address from dip switches
+ * | A0 | A1 |
+ * | 0  | 0  |    0x75 default I2C address  
+ * | 1  | 0  |    0x76
+ * | 0  | 1  |    0x77
+ * | 1  | 1  |    0x78 
+ * 
  */
 
 #pragma once
