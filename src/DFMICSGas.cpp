@@ -54,6 +54,7 @@ bool DFMICSGas::takeMeasurement() {
 	}
 	// Check if sensor is warmed up
 	if (!mics_sensor.warmUpTime(3)) {
+		Logger.println("Sensor still warming up. Wait 3 minutes from power on and try again.");
 		return false;
 	}
 	values[0] = mics_sensor.getGasData(CO);
