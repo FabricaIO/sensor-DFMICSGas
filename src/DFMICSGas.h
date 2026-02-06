@@ -25,8 +25,8 @@
 /// @brief Device for interfacing with the DF Robot I2C environmental sensor
 class DFMICSGas : public Sensor {
 	public:
-		DFMICSGas(String Name, TwoWire* I2C_bus = &Wire, uint8_t address = MICS_ADDRESS_3);
-		DFMICSGas(String Name, int sda, int scl, TwoWire* I2C_bus = &Wire, uint8_t address = MICS_ADDRESS_3);
+		DFMICSGas(String Name, TwoWire* I2C_bus = &Wire, uint8_t address = MICS_ADDRESS_0);
+		DFMICSGas(String Name, int sda, int scl, TwoWire* I2C_bus = &Wire, uint8_t address = MICS_ADDRESS_0);
 		bool begin();
 		bool takeMeasurement();
 		
@@ -40,5 +40,6 @@ class DFMICSGas : public Sensor {
 		/// @brief SDA pin in use
 		int sda_pin = -1;
 
+		/// @brief Sensor object
 		DFRobot_MICS_I2C mics_sensor;
 };

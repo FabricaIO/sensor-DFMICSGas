@@ -43,7 +43,7 @@
 					"name": "address",
 					"type": "uint8_t",
 					"description": "The I2C address of the sensor",
-					"default": "0x78"
+					"default": "0x75"
 				}
 			],
 			[
@@ -69,7 +69,7 @@
 					"name": "address",
 					"type": "uint8_t",
 					"description": "The I2C address of the sensor",
-					"default": "0x78"
+					"default": "0x75"
 				}
 			]
 		]

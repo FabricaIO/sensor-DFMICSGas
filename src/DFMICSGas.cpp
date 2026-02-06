@@ -48,15 +48,12 @@ bool DFMICSGas::begin() {
 /// @brief Takes a measurement
 /// @return True on success
 bool DFMICSGas::takeMeasurement() {
-	// Wake sensor if necessary
-	if(mics_sensor.getPowerState() == SLEEP_MODE) {
-    	mics_sensor.wakeUpMode();
-	}
-	// Check if sensor is warmed up
+	// Check if sensor is warmed up, and if it is, performs calibration
 	if (!mics_sensor.warmUpTime(3)) {
-		Logger.println("Sensor still warming up. Wait 3 minutes from power on and try again.");
+		Logger.println("Sensor still warming up. Wait 3 minutes from device boot and try again.");
 		return false;
 	}
+
 	values[0] = mics_sensor.getGasData(CO);
 	values[1] = mics_sensor.getGasData(NO2);
 	values[2] = mics_sensor.getGasData(C2H5OH);
