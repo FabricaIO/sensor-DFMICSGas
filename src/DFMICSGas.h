@@ -40,6 +40,9 @@ class DFMICSGas : public Sensor {
 		/// @brief SDA pin in use
 		int sda_pin = -1;
 
+		/// @brief Checks to see if the sensor has warmed up
+		bool warmedUp = false;
+
 		/// @brief Sensor object
 		DFRobot_MICS_I2C mics_sensor;
 };
